@@ -8,7 +8,7 @@ namespace Projectmars2021.Utilities
     {
         public class CommonDriver
         {
-            public static IWebDriver driver;
+            public static IWebDriver testdriver;
 
         }
     }
