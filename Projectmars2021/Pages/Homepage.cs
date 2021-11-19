@@ -38,7 +38,7 @@ namespace Projectmars2021.Pages
         public void EducationPage(IWebDriver testDriver)
         {
             // Navigate to the Education Tab
-            //WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]", 2);
+            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]", 2);
             IWebElement educationTab = testDriver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]"));
             educationTab.Click();
         }

@@ -67,13 +67,13 @@ namespace Projectmars2021.Pages
             // Identify the email textbox enter valid email
             WaitHelpers.WaitForElementPresent(testDriver, "Name", "email", 2);
             IWebElement emailTextBox = testDriver.FindElement(By.Name("email"));
-            string Email = "jlfuturistictech@hotmail.com";
+            string Email = "rehakumari.1291@gmail.com";
             emailTextBox.SendKeys(Email);
 
             // Identify password textbox enter valid password
             WaitHelpers.WaitForElementPresent(testDriver, "Name", "password", 2);
             IWebElement passwordTextBox = testDriver.FindElement(By.Name("password"));
-            string Password = "JialeQA2021";
+            string Password = "2Rekharakesh";
             passwordTextBox.SendKeys(Password);
 
             // Identify login button and click

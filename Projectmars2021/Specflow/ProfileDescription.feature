@@ -13,7 +13,7 @@ Scenario: 1. Adding of the Profile Description with records
 
      Examples:
      | Description                       |
-     | I'm a software automation tester. |
+     |I'm Rekha kumari. I'm a software automation tester. |
 
      @editDescription
 Scenario: 2. Editing of the Profile Description with records
@@ -24,4 +24,4 @@ Scenario: 2. Editing of the Profile Description with records
 
     Examples:
     | Description                                                                                |
-    | I'm a software automation tester who like to invest of his time on software testing tools. |
+    | I'm a software automation tester who like to invest of my time on software testing tools. |

@@ -77,7 +77,7 @@ namespace Projectmars2021.Specflow
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("1. Adding of the Profile Description with records")]
         [NUnit.Framework.CategoryAttribute("addDescription1")]
-        [NUnit.Framework.TestCaseAttribute("I\'m a software automation tester.", null)]
+        [NUnit.Framework.TestCaseAttribute("I\'m Rekha kumari. I\'m a software automation tester.", null)]
         public virtual void _1_AddingOfTheProfileDescriptionWithRecords(string description, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -129,8 +129,8 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("2. Editing of the Profile Description with records")]
         [NUnit.Framework.CategoryAttribute("editDescription")]
-        [NUnit.Framework.TestCaseAttribute("I\'m a software automation tester who like to invest of his time on software testi" +
-            "ng tools.", null)]
+        [NUnit.Framework.TestCaseAttribute("I\'m a software automation tester who like to invest of my time on software testin" +
+            "g tools.", null)]
         public virtual void _2_EditingOfTheProfileDescriptionWithRecords(string description, string[] exampleTags)
         {
             string[] @__tags = new string[] {

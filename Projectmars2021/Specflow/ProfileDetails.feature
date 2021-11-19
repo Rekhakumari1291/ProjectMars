@@ -21,7 +21,7 @@ Scenario: 2. Editing of the Seller Profile Name with records
 
 	Examples:
 	| FirstName | LastName | FullName |
-	| Caleb     | Yo       | Caleb Yo |
+	| dishu    | yadav       | dishu yadav |
 
 @editAvailability
 Scenario: 3. Edit the Availability in the Profile

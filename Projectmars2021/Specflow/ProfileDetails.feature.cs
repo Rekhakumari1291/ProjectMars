@@ -124,7 +124,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("2. Editing of the Seller Profile Name with records")]
         [NUnit.Framework.CategoryAttribute("editprofilename2")]
-        [NUnit.Framework.TestCaseAttribute("Caleb", "Yo", "Caleb Yo", null)]
+        [NUnit.Framework.TestCaseAttribute("dishu", "yadav", "dishu yadav", null)]
         public virtual void _2_EditingOfTheSellerProfileNameWithRecords(string firstName, string lastName, string fullName, string[] exampleTags)
         {
             string[] @__tags = new string[] {
