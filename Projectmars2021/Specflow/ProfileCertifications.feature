@@ -56,7 +56,7 @@ Scenario: 4. Editing of the Seller Profile Certifications with records
 
 	Examples:
 	| Certificate | From     | Year | Message                                         |
-	| ISTQB-V2   | INDIA | 2020 | ISTQB has been updated to your certification |
+	| ISTQB-V2   | Newzleand| 2020 | ISTQB has been updated to your certification |
 
 @deleteCertifications
 Scenario: 5. Deleting of the Seller Certifications Language

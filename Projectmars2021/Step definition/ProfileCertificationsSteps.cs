@@ -125,15 +125,15 @@ namespace Projectmars2021.Step_definition
         public void WhenTheDisplayPromptMessageWillAppear(string Message)
         {
             // Assertion that popup message record has been displayed.
-            Assert.AreEqual(profileCertsObj.GetNotification(testDriver), Message, "CTFL-AuT has been updated to your certification");
+            Assert.AreEqual(profileCertsObj.GetNotification(testDriver), Message, " ISTQB has been updated to your certification");
         }
         [Then(@"The new row should be updated as '(.*)', '(.*)', '(.*)' successfully")]
         public void ThenTheNewRowShouldBeUpdatedAsSuccessfully(string Certificate, string From, string Year)
         {
             // Assertion that Certificate, From and Year record has been edited.
-            Assert.AreEqual(profileCertsObj.GetCertification(testDriver), Certificate, "CT-MT has been updated to your certification");
+            Assert.AreEqual(profileCertsObj.GetCertification(testDriver), Certificate, " ISTQB has been updated to your certification");
             Assert.AreEqual(profileCertsObj.GetFrom(testDriver), From, "ISTQB has been updated to your certification");
-            Assert.AreEqual(profileCertsObj.GetYear(testDriver), Year, "2019 has been updated to your certification");
+            Assert.AreEqual(profileCertsObj.GetYear(testDriver), Year, "2020 has been updated to your certification");
         }
 
         [Given(@"I click on delete icon under Certification tab")]
@@ -145,7 +145,7 @@ namespace Projectmars2021.Step_definition
         public void WhenThePromptMessageOfTheWillAppear(string Message)
         {
             // Assertion that popup message record has been displayed.
-            Assert.AreEqual(profileCertsObj.GetNotification(testDriver), Message, "CTFL-AuT has been deleted from your certification");
+            Assert.AreEqual(profileCertsObj.GetNotification(testDriver), Message, " ISTQB has been deleted from your certification");
         }
         [Then(@"the Certification should have the deleted successfully")]
         public void ThenTheCertificationShouldHaveTheDeletedSuccessfully()
@@ -157,7 +157,7 @@ namespace Projectmars2021.Step_definition
             
             Assert.AreNotEqual(editedCertification == "ISTQB-V2", "Actual Certification and expected certification don't match");
             Assert.AreNotEqual(editedFrom == "INDIA", "Actual From and expected from don't match");
-            Assert.AreNotEqual(editedYear == "2020", "Actual Year and expected year don't match");
+            Assert.AreNotEqual(editedYear == "2019", "Actual Year and expected year don't match");
         }
 
     }
