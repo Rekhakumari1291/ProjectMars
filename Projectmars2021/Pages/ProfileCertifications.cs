@@ -50,6 +50,7 @@ namespace Projectmars2021.Pages
             IWebElement addBtn = testDriver.FindElement(By.XPath("//input[@value='Add']"));
             addBtn.Click();
         }
+       
 
         public void AddCertification(IWebDriver testDriver, string Certificate, string From, string Year)
         {
