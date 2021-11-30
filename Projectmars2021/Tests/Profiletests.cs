@@ -9,7 +9,7 @@ namespace Projectmars2021.Tests
 {
     class Profiletests
     {
-        static void Main(string[] args)
+         public void Main(string[] args)
         {
             // open chrome Browser
             IWebDriver testDriver = new ChromeDriver();
