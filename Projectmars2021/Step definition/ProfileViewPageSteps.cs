@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Projectmars2021.Pages;
 using System;
@@ -16,14 +17,16 @@ namespace Projectmars2021.Step_definition
         LoginPage loginPageObj = new LoginPage();
         // Home Page object initialization and definition
         HomePage NaviHomePageObj = new HomePage();
-        private ChromeDriver testDriver;
+        private IWebDriver testDriver;
+
 
         [Given(@"I login to the Trade Skills portal of view successfully")]
         public void GivenILoginToTheTradeSkillsPortalOfViewSuccessfully()
         {
             // Open chrome browser
             testDriver = new ChromeDriver();
-            loginPageObj.LoginPageSteps(testDriver);
+             loginPageObj.LoginPageSteps(testDriver);
+            
         }
         
         [Given(@"I navigate to the main page and click on Programming & Tech")]

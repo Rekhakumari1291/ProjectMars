@@ -13,8 +13,9 @@ namespace Projectmars2021.Pages
 
         public void DescriptionPenIcon(IWebDriver testDriver)
         {
+            
             // Identify Description icon and click
-            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/div/h3/span/i", 4);
+            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/div/h3/span/i", 25);
             IWebElement descriptionIcon = testDriver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/div/h3/span/i"));
             descriptionIcon.Click();
             testDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
@@ -26,14 +27,14 @@ namespace Projectmars2021.Pages
             Actions Hover = new Actions(testDriver);
 
             // Identify the description textarea enter valid description
-            WaitHelpers.WaitForElementPresent(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/div[1]/textarea", 2);
+            WaitHelpers.WaitForElementPresent(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/div[1]/textarea", 15);
             IWebElement descriptionTextBox = testDriver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/div[1]/textarea"));
             Hover.Click(descriptionTextBox).Perform();
             descriptionTextBox.Clear();
             descriptionTextBox.SendKeys(Description);
 
             // Click on "Save" button
-            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/button", 5);
+            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/button", 15);
             IWebElement saveButton = testDriver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/button"));
             saveButton.Click();
         }
@@ -50,13 +51,13 @@ namespace Projectmars2021.Pages
            
 
             // Identify the description textarea enter valid description
-            WaitHelpers.WaitForElementPresent(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/div[1]/textarea", 2);
+            WaitHelpers.WaitForElementPresent(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/div[1]/textarea", 12);
             IWebElement descriptionTextBox = testDriver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/div[1]/textarea"));
             descriptionTextBox.Clear();
             descriptionTextBox.SendKeys(Description);
 
             // Click on "Save" button
-            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/button", 5);
+            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/button", 15);
             IWebElement saveButton = testDriver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/button"));
             saveButton.Click();
         }

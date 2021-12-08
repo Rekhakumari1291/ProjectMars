@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Projectmars2021.Pages;
 using System;
@@ -14,14 +15,15 @@ namespace Projectmars2021.Step_definition
 
         // Profile Language Page object initialization and definition
         ProfileLangauge profileLanguageObj = new ProfileLangauge();
-        private ChromeDriver testDriver;
+        private IWebDriver testDriver;
 
         [Given(@"I login to the Trade Skills portal in the Profile successfully")]
         public void GivenILoginToTheTradeSkillsPortalInTheProfileSuccessfully()
         {
             // Open chrome browser
             testDriver = new ChromeDriver();
-            loginPageObj.LoginPageSteps(testDriver);
+             loginPageObj.LoginPageSteps(testDriver);
+          //  loginPageObj.GoToHomePage(testDriver);
         }
 
         [Given(@"I click on the Add New button under Languages tab")]

@@ -13,4 +13,4 @@ Scenario: 1. Navigate to the Login page with valid credentials in my profile
 
 	Examples: 
 	| Email                      | Password |
-	| rekhakumari.1291@gmail.com  |2Rekharakesh |
+	| rekhayadav101291@gmail.com |2jaikarnimaa |

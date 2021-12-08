@@ -263,7 +263,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("4. Editing of the Seller Profile Certifications with records")]
         [NUnit.Framework.CategoryAttribute("editCertifications")]
-        [NUnit.Framework.TestCaseAttribute("ISTQB-V2", "Newzleand", "2020", "ISTQB has been updated to your certification", null)]
+        [NUnit.Framework.TestCaseAttribute("ISTQB-V2", "Newzleand", "2021", "ISTQB-V2 has been updated to your certification", null)]
         public virtual void _4_EditingOfTheSellerProfileCertificationsWithRecords(string certificate, string from, string year, string message, string[] exampleTags)
         {
             string[] @__tags = new string[] {

@@ -14,7 +14,7 @@ Scenario: 1. Adding of the Seller Profile Education with invalid records
 
 	Examples:
 	| UniversityName | CountryUniversity | Title | Degree | GraduationYear | Message                     |
-	| MDU Rohtak          | INDIA      |       |        | 2012        | Please enter all the fields |
+	| JNU          | India       |       |        | 2012        | Please enter all the fields |
 
 	@addEducation2
 Scenario: 2. Adding of the Seller Profile Education with records
@@ -27,7 +27,7 @@ Scenario: 2. Adding of the Seller Profile Education with records
 
 	Examples:
 	| UniversityName | CountryUniversity | Title | Degree           | GraduationYear | Message                  |
-	| MDU Rohtak          | INDIA        | B.Tech | Computer science | 2012          | Education has been added |
+	| NUS      | Singapore       | B.Tech | Computer science | 2012          | Education has been added |
 
 @addEducation3
 Scenario: 3. Adding of the Seller Profile Education with duplicate records
@@ -40,8 +40,8 @@ Scenario: 3. Adding of the Seller Profile Education with duplicate records
 	Then The display error popup message '<Message>' will come out
 	Examples:
 	| UniversityName | CountryUniversity | Title | Degree           | GraduationYear | SecondGraduationYear | Message                            |
-	| MDU Rohtak        | INDIA         | B.Tech  | Computer Science | 2012           | 2020                 | This information is already exist. |
-	| MDU Rohtak            | INDIA         | B.Tech  | Computer Science | 2012           | 2021                 | Duplicated data                    |
+	| NUS      | Singapore       | B.Tech  | Computer Science | 2012           | 2020                 | This information is already exist. |
+	| NUS         | Singapore       | B.Tech  | Computer Science | 2012           | 2021                 | Duplicated data                    |
 @editEducation
 Scenario: 4. Editing of the Seller Profile Education with records
 	Given I login to the Trade Skills portal for education successfully
@@ -52,7 +52,7 @@ Scenario: 4. Editing of the Seller Profile Education with records
 	Then The new row should be updated in '<UniversityName>', '<CountryUniversity>', '<Title>', '<Degree>', '<GraduationYear>' successfully
 	Examples:
 	| UniversityName | CountryUniversity | Title  | Degree           | GraduationYear | Message                   |
-	| MDU Rohtak          | INDIA         | B.Tech | bachelor | 2016          | Education as been updated |
+	| MDU         | India             |    B.Sc | bachelor          | 2019         | Education as been updated |
 @deleteEducation
 Scenario: 5. Deleting of the Seller Profile Education
 	Given I login to the Trade Skills portal for education successfully

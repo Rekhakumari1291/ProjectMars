@@ -41,9 +41,9 @@ Scenario: 3. Adding of the Seller Profile Certifications with duplicate records
 	Then The display error popup message '<Message>' will shown
 
 	Examples:
-	| Certificate | From  | Year | SecondYear | Message                            |
-	| ISTQB     | INDIA| 2016| 2019       | This information is already exist. |
-	| ISTQB       | INDIA | 2016 | 2020       | Duplicated data                    |
+	| Certificate | From  | Year | SecondYear |       Message                            |
+	| ISTQB     | INDIA   | 2016    |     2019         | This information is already exist. |
+	| ISTQB       | INDIA | 2016 |    2020       | Duplicated data                    |
 
 @editCertifications
 Scenario: 4. Editing of the Seller Profile Certifications with records
@@ -56,7 +56,7 @@ Scenario: 4. Editing of the Seller Profile Certifications with records
 
 	Examples:
 	| Certificate | From     | Year | Message                                         |
-	| ISTQB-V2   | Newzleand| 2020 | ISTQB has been updated to your certification |
+	| ISTQB-V2   | Newzleand| 2021 | ISTQB-V2 has been updated to your certification |
 
 @deleteCertifications
 Scenario: 5. Deleting of the Seller Certifications Language

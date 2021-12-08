@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Projectmars2021.Pages;
 using System;
@@ -19,7 +20,9 @@ namespace Projectmars2021.Step_definition
 
         // Profile Details Page object initialization and definition
 
-        private ChromeDriver testDriver;
+        private IWebDriver testDriver;
+
+
 
         [Given(@"I login to the Trade Skills portal for education successfully")]
         public void GivenILoginToTheTradeSkillsPortalForEducationSuccessfully()
@@ -27,6 +30,7 @@ namespace Projectmars2021.Step_definition
             // Open chrome browser
             testDriver = new ChromeDriver();
             loginPageObj.LoginPageSteps(testDriver);
+           // loginPageObj.GoToHomePage(testDriver);
         }
 
         [Given(@"I navigate to the skiils page under Education tab")]
@@ -74,9 +78,9 @@ namespace Projectmars2021.Step_definition
             // Assertion that UniversityName, University, Title, Degree and GraduationYear record has been added.
             Assert.AreEqual(profileEducObj.GetUniversityName(testDriver), UniversityName, "NUS has been added");
             Assert.AreEqual(profileEducObj.GetCountryUni(testDriver), CountryUniversity, "Singapore has been added");
-            Assert.AreEqual(profileEducObj.GetTitle(testDriver), Title, "B.Sc has been added");
-            Assert.AreEqual(profileEducObj.GetDegree(testDriver), Degree, "Software-Testing has been added");
-            Assert.AreEqual(profileEducObj.GetGraduationYear(testDriver), GraduationYear, "2020 has been added");
+            Assert.AreEqual(profileEducObj.GetTitle(testDriver), Title, "B.Tech has been added");
+            Assert.AreEqual(profileEducObj.GetDegree(testDriver), Degree, " Computer science has been added");
+            Assert.AreEqual(profileEducObj.GetGraduationYear(testDriver), GraduationYear, "2012 has been added");
         }
 
         [Given(@"I click on Add New button under Education section")]
@@ -122,17 +126,17 @@ namespace Projectmars2021.Step_definition
         [When(@"The display prompt message '(.*)' will shown")]
         public void WhenTheDisplayPromptMessageWillShown(string Message)
         {
-            Assert.AreEqual(profileEducObj.GetNotification(testDriver), Message, "Education as been updated");
+            Assert.AreEqual(profileEducObj.GetNotification(testDriver), Message, "Education has been updated");
         }
         [Then(@"The new row should be updated in '(.*)', '(.*)', '(.*)', '(.*)', '(.*)' successfully")]
         public void ThenTheNewRowShouldBeUpdatedInSuccessfully(string UniversityName, string CountryUniversity, string Title, string Degree, string GraduationYear)
         {
            //  Assertion that UniversityName, University, Title, Degree and GraduationYear record has been updated.
-            Assert.AreEqual(profileEducObj.GetUniversityName(testDriver), UniversityName, "SMU as been updated");
-            Assert.AreEqual(profileEducObj.GetCountryUni(testDriver), CountryUniversity, "Singapore as been updated");
-            Assert.AreEqual(profileEducObj.GetTitle(testDriver), Title, "B.Tech as been updated");
-            Assert.AreEqual(profileEducObj.GetDegree(testDriver), Degree, "Software Testing as been updated");
-            Assert.AreEqual(profileEducObj.GetGraduationYear(testDriver), GraduationYear, "2021 as been updated");
+            Assert.AreEqual(profileEducObj.GetUniversityName(testDriver), UniversityName, "MDU as been updated");
+            Assert.AreEqual(profileEducObj.GetCountryUni(testDriver), CountryUniversity, "India as been updated");
+            Assert.AreEqual(profileEducObj.GetTitle(testDriver), Title, "B.Sc as been updated");
+            Assert.AreEqual(profileEducObj.GetDegree(testDriver), Degree, "bachelor as been updated");
+            Assert.AreEqual(profileEducObj.GetGraduationYear(testDriver), GraduationYear, "20219 as been updated");
         }
 
         [Given(@"I click on delete icon under Education tab")]
@@ -156,11 +160,11 @@ namespace Projectmars2021.Step_definition
             string editedGraduationYr = profileEducObj.GetGraduationYear2(testDriver);
 
             // Assertion that UniversityName, University, Title, Degree and GraduationYear record has been deleted.
-            Assert.AreNotEqual(editedUniversityName == "MDU Rohtak", "MDU Rohtak entry successfully removed");
-            Assert.AreNotEqual(editedCountryUni == "INDIA", "INDIA entry successfully removed");
-            Assert.AreNotEqual(editedTitle == "B.Tech", "B.Tech entry successfully removed");
+            Assert.AreNotEqual(editedUniversityName == "MDU ", "MDU  entry successfully removed");
+            Assert.AreNotEqual(editedCountryUni == "Inia", "India entry successfully removed");
+            Assert.AreNotEqual(editedTitle == "B.Sc", "B.Sc entry successfully removed");
             Assert.AreNotEqual(editedDegree == "bachleor", "bachleor entry successfully removed");
-            Assert.AreNotEqual(editedGraduationYr == "2016", "2016 entry successfully removed");
+            Assert.AreNotEqual(editedGraduationYr == "2019", "2019 entry successfully removed");
         }
 
     }

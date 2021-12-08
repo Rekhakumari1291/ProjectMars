@@ -78,7 +78,7 @@ namespace Projectmars2021.Specflow
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("1. Adding of the Seller Profile Education with invalid records")]
         [NUnit.Framework.CategoryAttribute("addEducation1")]
-        [NUnit.Framework.TestCaseAttribute("MDU Rohtak", "INDIA", "", "", "2012", "Please enter all the fields", null)]
+        [NUnit.Framework.TestCaseAttribute("JNU", "India", "", "", "2012", "Please enter all the fields", null)]
         public virtual void _1_AddingOfTheSellerProfileEducationWithInvalidRecords(string universityName, string countryUniversity, string title, string degree, string graduationYear, string message, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -138,7 +138,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("2. Adding of the Seller Profile Education with records")]
         [NUnit.Framework.CategoryAttribute("addEducation2")]
-        [NUnit.Framework.TestCaseAttribute("MDU Rohtak", "INDIA", "B.Tech", "Computer science", "2012", "Education has been added", null)]
+        [NUnit.Framework.TestCaseAttribute("NUS", "Singapore", "B.Tech", "Computer science", "2012", "Education has been added", null)]
         public virtual void _2_AddingOfTheSellerProfileEducationWithRecords(string universityName, string countryUniversity, string title, string degree, string graduationYear, string message, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -201,8 +201,8 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("3. Adding of the Seller Profile Education with duplicate records")]
         [NUnit.Framework.CategoryAttribute("addEducation3")]
-        [NUnit.Framework.TestCaseAttribute("MDU Rohtak", "INDIA", "B.Tech", "Computer Science", "2012", "2020", "This information is already exist.", null)]
-        [NUnit.Framework.TestCaseAttribute("MDU Rohtak", "INDIA", "B.Tech", "Computer Science", "2012", "2021", "Duplicated data", null)]
+        [NUnit.Framework.TestCaseAttribute("NUS", "Singapore", "B.Tech", "Computer Science", "2012", "2020", "This information is already exist.", null)]
+        [NUnit.Framework.TestCaseAttribute("NUS", "Singapore", "B.Tech", "Computer Science", "2012", "2021", "Duplicated data", null)]
         public virtual void _3_AddingOfTheSellerProfileEducationWithDuplicateRecords(string universityName, string countryUniversity, string title, string degree, string graduationYear, string secondGraduationYear, string message, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -269,7 +269,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("4. Editing of the Seller Profile Education with records")]
         [NUnit.Framework.CategoryAttribute("editEducation")]
-        [NUnit.Framework.TestCaseAttribute("MDU Rohtak", "INDIA", "B.Tech", "bachelor", "2016", "Education as been updated", null)]
+        [NUnit.Framework.TestCaseAttribute("MDU", "India", "B.Sc", "bachelor", "2019", "Education as been updated", null)]
         public virtual void _4_EditingOfTheSellerProfileEducationWithRecords(string universityName, string countryUniversity, string title, string degree, string graduationYear, string message, string[] exampleTags)
         {
             string[] @__tags = new string[] {

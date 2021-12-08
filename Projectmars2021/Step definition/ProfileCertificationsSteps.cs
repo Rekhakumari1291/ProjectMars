@@ -1,5 +1,6 @@
 ﻿
 using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Projectmars2021.Pages;
 using System;
@@ -9,29 +10,44 @@ namespace Projectmars2021.Step_definition
 {
     [Binding]
     public class ProfileCertificationsSteps
-    { 
-         // Login Page object initialization and definition
-    LoginPage loginPageObj = new LoginPage();
-
-    // Home Page object initialization and definition
-    HomePage NaviHomePageObj = new HomePage();
-
+    {
         // Profile Certications Page object initialization and definition
+
         ProfileCertifications profileCertsObj = new ProfileCertifications();
-        private ChromeDriver testDriver;
+        // Home Page object initialization and definition
+
+        HomePage NaviHomePageObj = new HomePage();
+
+
+        // Login Page object initialization and definition
+
+        LoginPage loginPageObj = new LoginPage();
+        private IWebDriver testDriver;
+
+       
+
+      
 
         [Given(@"I login to the Trade Skills portal for Certs successfully")]
         public void GivenILoginToTheTradeSkillsPortalForCertsSuccessfully()
         {
             // Open chrome browser
             testDriver = new ChromeDriver();
+
+            
+            LoginPage loginPageObj = new LoginPage();
+
+            //loginPageObj.GoToHomePage(testDriver);
             loginPageObj.LoginPageSteps(testDriver);
-        
-    }
+            
+
+        }
         
         [Given(@"I navigate to the skiils page under Certifications tab")]
         public void GivenINavigateToTheSkiilsPageUnderCertificationsTab()
         {
+            //certificationPage initialization and definition
+            HomePage homePageobj = new HomePage();
             NaviHomePageObj.CertificationsPage(testDriver);
         }
         
@@ -99,6 +115,7 @@ namespace Projectmars2021.Step_definition
             // Assertion that error popup message record has been displayed.
             Assert.AreEqual(profileCertsObj.GetNotification(testDriver), Message, "This information is already exist.");
         }
+        
         [When(@"I enter the record '(.*)', '(.*)', '(.*)' and click on add button")]
         public void WhenIEnterTheRecordAndClickOnAddButton(string Certificate, string From, string SecondYear)
         {
@@ -125,15 +142,15 @@ namespace Projectmars2021.Step_definition
         public void WhenTheDisplayPromptMessageWillAppear(string Message)
         {
             // Assertion that popup message record has been displayed.
-            Assert.AreEqual(profileCertsObj.GetNotification(testDriver), Message, " ISTQB has been updated to your certification");
+            Assert.AreEqual(profileCertsObj.GetNotification(testDriver), Message, " ISTQB-V2 has been updated to your certification");
         }
         [Then(@"The new row should be updated as '(.*)', '(.*)', '(.*)' successfully")]
         public void ThenTheNewRowShouldBeUpdatedAsSuccessfully(string Certificate, string From, string Year)
         {
             // Assertion that Certificate, From and Year record has been edited.
             Assert.AreEqual(profileCertsObj.GetCertification(testDriver), Certificate, " ISTQB has been updated to your certification");
-            Assert.AreEqual(profileCertsObj.GetFrom(testDriver), From, "ISTQB has been updated to your certification");
-            Assert.AreEqual(profileCertsObj.GetYear(testDriver), Year, "2020 has been updated to your certification");
+            Assert.AreEqual(profileCertsObj.GetFrom(testDriver), From, "INDIA has been updated to your certification");
+            Assert.AreEqual(profileCertsObj.GetYear(testDriver), Year, "2019 has been updated to your certification");
         }
 
         [Given(@"I click on delete icon under Certification tab")]
@@ -145,7 +162,7 @@ namespace Projectmars2021.Step_definition
         public void WhenThePromptMessageOfTheWillAppear(string Message)
         {
             // Assertion that popup message record has been displayed.
-            Assert.AreEqual(profileCertsObj.GetNotification(testDriver), Message, " ISTQB has been deleted from your certification");
+            Assert.AreEqual(profileCertsObj.GetNotification(testDriver), Message, " ISTQB-V2 has been deleted from your certification");
         }
         [Then(@"the Certification should have the deleted successfully")]
         public void ThenTheCertificationShouldHaveTheDeletedSuccessfully()

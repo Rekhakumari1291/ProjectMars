@@ -12,11 +12,11 @@ namespace Projectmars2021.Pages
         public void AddNameIcon(IWebDriver testDriver)
         {
             // Identify Profile icon and click
-            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]", 2);
+            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]", 12);
             IWebElement nameIcon = testDriver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]"));
             nameIcon.Click();
 
-            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i", 2);
+            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i", 12);
             IWebElement selectNameIcon = testDriver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
             selectNameIcon.Click();
         }
@@ -24,12 +24,12 @@ namespace Projectmars2021.Pages
         public void ClearNameFields(IWebDriver testDriver)
         {
             // Identify the first name textbox enter valid first name
-            WaitHelpers.WaitForElementPresent(testDriver, "Name", "firstName", 2);
+            WaitHelpers.WaitForElementPresent(testDriver, "Name", "firstName", 10);
             IWebElement firstNameTextBox = testDriver.FindElement(By.Name("firstName"));
             firstNameTextBox.Clear();
 
             // Identify last name textbox enter valid last name
-            WaitHelpers.WaitForElementPresent(testDriver, "Name", "lastName", 2);
+            WaitHelpers.WaitForElementPresent(testDriver, "Name", "lastName", 12);
             IWebElement lastNameTextBox = testDriver.FindElement(By.Name("lastName"));
             lastNameTextBox.Clear();
         }
@@ -37,7 +37,7 @@ namespace Projectmars2021.Pages
         public void AddSaveBtn(IWebDriver testDriver)
         {
             // Click on "Save" button
-            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i", 3);
+            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i", 13);
             IWebElement saveButton = testDriver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/div[2]/button"));
             saveButton.Click();
         }
@@ -45,13 +45,13 @@ namespace Projectmars2021.Pages
         public void EditProfileName(IWebDriver testDriver, string FirstName, string LastName)
         {
             // Identify the first name textbox enter valid first name
-            WaitHelpers.WaitForElementPresent(testDriver, "Name", "firstName", 2);
+            WaitHelpers.WaitForElementPresent(testDriver, "Name", "firstName", 12);
             IWebElement firstNameTextBox = testDriver.FindElement(By.Name("firstName"));
             firstNameTextBox.Clear();
             firstNameTextBox.SendKeys(FirstName);
 
             // Identify last name textbox enter valid last name
-            WaitHelpers.WaitForElementPresent(testDriver, "Name", "lastName", 2);
+            WaitHelpers.WaitForElementPresent(testDriver, "Name", "lastName", 12);
             IWebElement lastNameTextBox = testDriver.FindElement(By.Name("lastName"));
             lastNameTextBox.Clear();
             lastNameTextBox.SendKeys(LastName);
@@ -76,7 +76,7 @@ namespace Projectmars2021.Pages
         public void AvailabilityPenIcon(IWebDriver testDriver)
         {
             // Identify Availability icon and click
-            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/i", 2);
+            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/i", 12);
             IWebElement availabilityIcon = testDriver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/i"));
             availabilityIcon.Click();
         }
@@ -90,19 +90,19 @@ namespace Projectmars2021.Pages
 
             if (Availability == "Full Time")
             {
-                WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/select/option[3]", 2);
+                WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/select/option[3]", 12);
                 IWebElement fullTime = testDriver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/select/option[3]"));
                 fullTime.Click();
             }
             else
             {
-                WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/select/option[1]", 2);
+                WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/select/option[1]", 12);
                 IWebElement selectAvailability = testDriver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/select/option[1]"));
                 selectAvailability.Click();
             }
 
             // Select the remove icon
-         //   WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/i", 2);
+         //   WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/i", 12);
             IWebElement selectRemoveIcon = testDriver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/i"));
             selectRemoveIcon.Click();
         }
@@ -116,7 +116,7 @@ namespace Projectmars2021.Pages
         public void HoursPenIcon(IWebDriver testDriver)
         {
             // Identify Hours icon and click
-            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/i", 2);
+            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/i", 12);
             IWebElement hoursIcon = testDriver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/i"));
             hoursIcon.Click();
         }
@@ -130,19 +130,19 @@ namespace Projectmars2021.Pages
 
             if (Hours == "As needed")
             {
-                WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/select/option[4]", 2);
+                WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/select/option[4]", 12);
                 IWebElement asNeeded = testDriver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/select/option[4]"));
                 asNeeded.Click();
             }
             else
             {
-                WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/select/option[1]", 2);
+                WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/select/option[1]", 12);
                 IWebElement selectHrs = testDriver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/select/option[1]"));
                 selectHrs.Click();
             }
 
             // Select the remove icon
-            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/i", 2);
+            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/i", 12);
             IWebElement selectRemoveIcon = testDriver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/i"));
             selectRemoveIcon.Click();
         }
@@ -156,7 +156,7 @@ namespace Projectmars2021.Pages
         public void EarnTargetPenIcon(IWebDriver testDriver)
         {
             // Identify EarnTarget icon and click
-            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/i", 2);
+            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/i", 12);
             IWebElement earnTargetIcon = testDriver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/i"));
             earnTargetIcon.Click();
         }
@@ -170,19 +170,19 @@ namespace Projectmars2021.Pages
 
             if (EarnTarget == "More than $1000 per month")
             {
-                WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/select/option[4]", 2);
+                WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/select/option[4]", 12);
                 IWebElement moreThan1000permth = testDriver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/select/option[4]"));
                 moreThan1000permth.Click();
             }
             else
             {
-                WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/select/option[1]", 2);
+                WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/select/option[1]", 12);
                 IWebElement selectHrs = testDriver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/select/option[1]"));
                 selectHrs.Click();
             }
 
             // Select the remove icon
-            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/i", 2);
+            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/i", 12);
             IWebElement selectRemoveIcon = testDriver.FindElement(By.XPath("//*[@id='account-profile-section']/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/i"));
             selectRemoveIcon.Click();
         }

@@ -4,6 +4,7 @@ using Projectmars2021.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Projectmars2021.Pages
 {
@@ -17,12 +18,12 @@ namespace Projectmars2021.Pages
             Actions Hover = new Actions(testDriver);
 
             // Select the Seller from "Seller" dropdown list
-            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/div[1]/div[2]/div/span", 2);
+          //  WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/div[1]/div[2]/div/span", 12);
             IWebElement MouseHover = testDriver.FindElement(By.XPath("/html/body/div/div/div/div[1]/div[2]/div/span"));
             Hover.MoveToElement(MouseHover).Perform();
 
             // Select the "Go to Profile" from "Seller" dropdown list
-            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='service-search-section']/div[1]/div[2]/div/span/div/a[1]", 2);
+          //  WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='service-search-section']/div[1]/div[2]/div/span/div/a[1]", 12);
             IWebElement GoToProfile = testDriver.FindElement(By.XPath("//*[@id='service-search-section']/div[1]/div[2]/div/span/div/a[1]"));
             GoToProfile.Click();
         }
@@ -45,10 +46,14 @@ namespace Projectmars2021.Pages
 
         public void CertificationsPage(IWebDriver testDriver)
         {
+           
             // Navigate to the Certifications Tab
-            WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]", 2);
-            IWebElement certificationsTab = testDriver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
-            certificationsTab.Click();
+           //  WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "//*[@id='abId0.7010272668542341']/section[2]/div/div/div/div[3]/form/div[1]/a[4]");
+            //  WaitHelpers.WaitForElementToBeClickable(testDriver, "XPath", "/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]", 5);
+              IWebElement certificationsTab = testDriver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
+            //IWebElement certificationsTab = testDriver.FindElement(By.XPath("//*[@id='abId0.7010272668542341']/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
+           
+                       certificationsTab.Click();
         }
     }
 }

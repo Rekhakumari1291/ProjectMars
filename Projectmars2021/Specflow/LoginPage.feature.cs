@@ -77,7 +77,7 @@ namespace Projectmars2021.Specflow
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("1. Navigate to the Login page with valid credentials in my profile")]
         [NUnit.Framework.CategoryAttribute("automate")]
-        [NUnit.Framework.TestCaseAttribute("rekhakumari.1291@gmail.com", "2Rekharakesh", null)]
+        [NUnit.Framework.TestCaseAttribute("rekhayadav101291@gmail.com", "2jaikarnimaa", null)]
         public virtual void _1_NavigateToTheLoginPageWithValidCredentialsInMyProfile(string email, string password, string[] exampleTags)
         {
             string[] @__tags = new string[] {

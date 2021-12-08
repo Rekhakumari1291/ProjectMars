@@ -19,12 +19,14 @@ namespace Projectmars2021.Step_definition
         ProfileSkills profileSkillsObj = new ProfileSkills();
         private IWebDriver testDriver;
 
+
         [Given(@"I login to the Trade Skills portal in Profile successfully")]
         public void GivenILoginToTheTradeSkillsPortalInProfileSuccessfully()
         {
             // Open chrome browser
             testDriver = new ChromeDriver();
-            loginPageObj.LoginPageSteps(testDriver);
+             loginPageObj.LoginPageSteps(testDriver);
+            //loginPageObj.GoToHomePage(testDriver);
         }
         
         [Given(@"I navigate to the skiils page under Skills tab")]
